@@ -996,7 +996,7 @@ export default function AAMBooking() {
               <path d="M20 10V30" stroke="#00d4ff" strokeWidth="0.5" strokeDasharray="2 2" opacity="0.4"/>
             </svg>
             <div>
-              <div className="logo-text">AEROVEX</div>
+              <div className="logo-text">SKYHOP</div>
               <div className="logo-sub">Advanced Air Mobility</div>
             </div>
           </div>
