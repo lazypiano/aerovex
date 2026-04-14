@@ -6,17 +6,17 @@ const style = `
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --sky: #0a0f1e;
-    --sky2: #0d1a2e;
-    --horizon: #0e2a4a;
-    --electric: #00d4ff;
-    --pulse: #4af0c4;
-    --glow: #0099cc;
-    --warn: #ff6b35;
-    --white: #f0f6ff;
-    --muted: #c8d8e8;
-    --card: rgba(13, 26, 46, 0.85);
-    --border: rgba(0, 212, 255, 0.15);
+    --sky: #ffffff;
+    --sky2: #f5f9f3;
+    --horizon: #eef4eb;
+    --electric: #2d5a3d;
+    --pulse: #6b8c5e;
+    --glow: #1a3326;
+    --warn: #c17f3a;
+    --white: #1a3326;
+    --muted: #6b8c5e;
+    --card: rgba(238, 244, 235, 0.9);
+    --border: rgba(45, 90, 61, 0.15);
   }
 
   .aam-root {
@@ -33,9 +33,7 @@ const style = `
     position: fixed;
     inset: 0;
     z-index: 0;
-    background: radial-gradient(ellipse at 20% 50%, #0a2040 0%, transparent 60%),
-                radial-gradient(ellipse at 80% 20%, #001830 0%, transparent 50%),
-                linear-gradient(180deg, #020710 0%, #0a1628 40%, #0d2240 100%);
+    background: linear-gradient(180deg, #ffffff 0%, #f5f9f3 100%);
   }
 
   .grid-overlay {
@@ -43,8 +41,8 @@ const style = `
     inset: 0;
     z-index: 0;
     background-image:
-      linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+      linear-gradient(rgba(45,90,61,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(45,90,61,0.04) 1px, transparent 1px);
     background-size: 60px 60px;
     animation: gridDrift 20s linear infinite;
   }
@@ -60,8 +58,7 @@ const style = `
     left: -10%;
     right: -10%;
     height: 300px;
-    background: radial-gradient(ellipse at center bottom, rgba(0,153,204,0.12) 0%, transparent 70%);
-    z-index: 0;
+    background: radial-gradient(ellipse at center bottom, rgba(45,90,61,0.08) 0%, transparent 70%);
     pointer-events: none;
   }
 
@@ -77,7 +74,7 @@ const style = `
     position: absolute;
     width: 2px;
     height: 2px;
-    background: white;
+    background: #a3c98a;
     border-radius: 50%;
     animation: twinkle var(--d, 3s) var(--delay, 0s) ease-in-out infinite alternate;
   }
@@ -340,10 +337,10 @@ const style = `
   .search-btn {
     width: 100%;
     padding: 18px;
-    background: linear-gradient(135deg, var(--glow), var(--electric));
+    background: var(--electric);
     border: none;
     border-radius: 12px;
-    color: var(--sky);
+    color: #ffffff;
     font-family: 'Inter', sans-serif;
     font-size: 15px;
     font-weight: 800;
@@ -771,10 +768,10 @@ const style = `
   .confirm-btn {
     width: 100%;
     padding: 18px;
-    background: linear-gradient(135deg, var(--glow), var(--electric));
+    background: var(--electric);
     border: none;
     border-radius: 12px;
-    color: var(--sky);
+    color: #ffffff;
     font-family: 'Inter', sans-serif;
     font-size: 15px;
     font-weight: 800;
@@ -856,9 +853,7 @@ const style = `
   .stat-value {
     font-size: 26px;
     font-weight: 800;
-    background: linear-gradient(135deg, var(--white), var(--electric));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ffffff;
     line-height: 1;
     margin-bottom: 4px;
   }
@@ -866,7 +861,7 @@ const style = `
   .stat-label {
     font-family: 'Inter Mono', monospace;
     font-size: 10px;
-    color: var(--muted);
+    color: #a3c98a;
     letter-spacing: 0.12em;
     text-transform: uppercase;
   }
@@ -990,10 +985,10 @@ export default function AAMBooking() {
         <header className="header">
           <div className="logo">
             <svg className="logo-mark" viewBox="0 0 40 40" fill="none">
-              <path d="M20 4L36 20L20 30L4 20L20 4Z" stroke="#00d4ff" strokeWidth="1.5" fill="none" opacity="0.6"/>
-              <path d="M8 20L20 10L32 20" stroke="#4af0c4" strokeWidth="1.5" fill="none"/>
-              <circle cx="20" cy="20" r="3" fill="#00d4ff"/>
-              <path d="M20 10V30" stroke="#00d4ff" strokeWidth="0.5" strokeDasharray="2 2" opacity="0.4"/>
+              <rect width="40" height="40" rx="10" fill="#eef4eb"/>
+              <path d="M8 28 Q20 8 32 28" stroke="#2d5a3d" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+              <circle cx="20" cy="23" r="3.5" fill="#2d5a3d"/>
+              <path d="M14 23 Q20 13 26 23" fill="#a3c98a" opacity="0.6"/>
             </svg>
             <div>
               <div className="logo-text">SKYHOP</div>
