@@ -391,7 +391,7 @@ const style = `
   }
 
   .flight-card {
-    background: rgba(10, 20, 35, 0.6);
+    background: #f5f9f3;
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 24px;
@@ -409,24 +409,26 @@ const style = `
     top: 0;
     bottom: 0;
     width: 3px;
-    background: linear-gradient(180deg, var(--electric), var(--pulse));
+    background: linear-gradient(180deg, #2d5a3d, #6b8c5e);
     opacity: 0;
     transition: opacity 0.2s;
   }
 
   .flight-card:hover {
-    border-color: rgba(0, 212, 255, 0.35);
-    background: rgba(0, 212, 255, 0.04);
+    border-color: rgba(45, 90, 61, 0.4);
+    background: #eef4eb;
     transform: translateX(4px);
   }
 
   .flight-card:hover::before { opacity: 1; }
+  .flight-card.selected::before { opacity: 1; }
 
   .flight-card.selected {
-    border-color: rgba(0, 212, 255, 0.5);
-    background: rgba(0, 212, 255, 0.06);
+    border-color: rgba(45, 90, 61, 0.6);
+    background: #eef4eb;
   }
 
+  .flight-card:hover::before { opacity: 1; }
   .flight-card.selected::before { opacity: 1; }
 
   .flight-main {
@@ -449,12 +451,13 @@ const style = `
     font-weight: 800;
     letter-spacing: -0.02em;
     line-height: 1;
+    color: #1a3326;
   }
 
   .time-port {
     font-family: 'Inter Mono', monospace;
     font-size: 11px;
-    color: var(--muted);
+    color: #6b8c5e;
     letter-spacing: 0.1em;
     margin-top: 4px;
   }
@@ -507,9 +510,7 @@ const style = `
   .price-value {
     font-size: 28px;
     font-weight: 800;
-    background: linear-gradient(135deg, var(--white), var(--electric));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #2d5a3d;
     line-height: 1;
   }
 
@@ -532,7 +533,7 @@ const style = `
   .meta-tag {
     font-family: 'Inter Mono', monospace;
     font-size: 10px;
-    color: var(--muted);
+    color: #6b8c5e;
     letter-spacing: 0.08em;
     display: flex;
     align-items: center;
@@ -554,8 +555,8 @@ const style = `
     margin-left: auto;
     font-family: 'Inter Mono', monospace;
     font-size: 10px;
-    color: var(--electric);
-    border: 1px solid rgba(0,212,255,0.3);
+    color: #2d5a3d;
+    border: 1px solid rgba(45,90,61,0.3);
     padding: 4px 10px;
     border-radius: 6px;
     letter-spacing: 0.1em;
