@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const style = `
-  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Inter+Mono:wght@400;500&display=swap');
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -14,13 +14,13 @@ const style = `
     --glow: #0099cc;
     --warn: #ff6b35;
     --white: #f0f6ff;
-    --muted: #5a7a9a;
+    --muted: #c8d8e8;
     --card: rgba(13, 26, 46, 0.85);
     --border: rgba(0, 212, 255, 0.15);
   }
 
   .aam-root {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     background: var(--sky);
     min-height: 100vh;
     color: var(--white);
@@ -128,7 +128,7 @@ const style = `
   }
 
   .logo-sub {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter Mono', monospace;
     font-size: 10px;
     color: var(--muted);
     letter-spacing: 0.2em;
@@ -137,7 +137,7 @@ const style = `
   }
 
   .status-pill {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter Mono', monospace;
     font-size: 11px;
     color: var(--pulse);
     background: rgba(74, 240, 196, 0.08);
@@ -169,7 +169,7 @@ const style = `
   }
 
   .hero-eyebrow {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter Mono', monospace;
     font-size: 11px;
     color: var(--electric);
     letter-spacing: 0.3em;
@@ -184,6 +184,7 @@ const style = `
     line-height: 1.0;
     letter-spacing: -0.02em;
     margin-bottom: 16px;
+    color: var(--white);
   }
 
   .hero-title span {
@@ -193,9 +194,9 @@ const style = `
   }
 
   .hero-sub {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter Mono', monospace;
     font-size: 13px;
-    color: var(--muted);
+    color: var(--white);
     letter-spacing: 0.05em;
     line-height: 1.7;
   }
@@ -227,7 +228,7 @@ const style = `
     color: var(--muted);
     border: none;
     background: transparent;
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     transition: all 0.2s;
     position: relative;
   }
@@ -288,7 +289,7 @@ const style = `
   }
 
   .field-label {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter Mono', monospace;
     font-size: 10px;
     color: var(--electric);
     letter-spacing: 0.2em;
@@ -302,7 +303,7 @@ const style = `
     border-radius: 10px;
     padding: 14px 16px;
     color: var(--white);
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 15px;
     font-weight: 600;
     width: 100%;
@@ -343,7 +344,7 @@ const style = `
     border: none;
     border-radius: 12px;
     color: var(--sky);
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 15px;
     font-weight: 800;
     letter-spacing: 0.1em;
@@ -386,7 +387,7 @@ const style = `
   }
 
   .results-count {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter Mono', monospace;
     font-size: 12px;
     color: var(--electric);
     opacity: 0.7;
@@ -454,7 +455,7 @@ const style = `
   }
 
   .time-port {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter Mono', monospace;
     font-size: 11px;
     color: var(--muted);
     letter-spacing: 0.1em;
@@ -471,7 +472,7 @@ const style = `
   }
 
   .path-duration {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter Mono', monospace;
     font-size: 10px;
     color: var(--electric);
     letter-spacing: 0.15em;
@@ -496,7 +497,7 @@ const style = `
   }
 
   .path-stops {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter Mono', monospace;
     font-size: 10px;
     color: var(--pulse);
     letter-spacing: 0.1em;
@@ -516,7 +517,7 @@ const style = `
   }
 
   .price-label {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter Mono', monospace;
     font-size: 10px;
     color: var(--muted);
     letter-spacing: 0.1em;
@@ -532,7 +533,7 @@ const style = `
   }
 
   .meta-tag {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter Mono', monospace;
     font-size: 10px;
     color: var(--muted);
     letter-spacing: 0.08em;
@@ -554,7 +555,7 @@ const style = `
 
   .select-badge {
     margin-left: auto;
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter Mono', monospace;
     font-size: 10px;
     color: var(--electric);
     border: 1px solid rgba(0,212,255,0.3);
@@ -619,7 +620,7 @@ const style = `
   }
 
   .modal-sub {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter Mono', monospace;;
     font-size: 11px;
     color: var(--muted);
     margin-top: 4px;
@@ -676,7 +677,7 @@ const style = `
   }
 
   .summary-item {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter Mono', monospace;
     font-size: 11px;
     color: var(--muted);
     letter-spacing: 0.05em;
@@ -695,7 +696,7 @@ const style = `
   }
 
   .form-section-title {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter Mono', monospace;
     font-size: 10px;
     color: var(--electric);
     letter-spacing: 0.2em;
@@ -717,7 +718,7 @@ const style = `
   .form-field:last-child { margin-bottom: 0; }
 
   .form-label {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter Mono', monospace;
     font-size: 10px;
     color: var(--muted);
     letter-spacing: 0.15em;
@@ -730,7 +731,7 @@ const style = `
     border-radius: 10px;
     padding: 12px 14px;
     color: var(--white);
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 14px;
     width: 100%;
     outline: none;
@@ -774,7 +775,7 @@ const style = `
     border: none;
     border-radius: 12px;
     color: var(--sky);
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 15px;
     font-weight: 800;
     letter-spacing: 0.1em;
@@ -814,7 +815,7 @@ const style = `
   }
 
   .success-sub {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter Mono', monospace;
     font-size: 13px;
     color: var(--muted);
     line-height: 1.6;
@@ -822,7 +823,7 @@ const style = `
   }
 
   .booking-ref {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter Mono', monospace;
     font-size: 22px;
     font-weight: 500;
     color: var(--electric);
@@ -863,7 +864,7 @@ const style = `
   }
 
   .stat-label {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter Mono', monospace;
     font-size: 10px;
     color: var(--muted);
     letter-spacing: 0.12em;
